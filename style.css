@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 70%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.2;
+  font-size: 15px;
+  font-weight: 500;
+  background-image: url(./img/nasa-Q1p7bh3SHj8-unsplash.jpg);
+  background-size: cover;
+  color: aliceblue;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr)  50vh;
+}
+.heading {
+  grid-column: 2/4;
+  font-size: 50px;
+  justify-self: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+  color: rgb(209, 204, 204);
+}
+.form {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: flex-end;
+
+}
+.search {
+  color: rgb(98, 195, 240);
+  font-size: 20px;
+  padding-right: 1rem;
+  align-self: flex-end;
+}
+.search-from {
+  width: 15vw;
+  height: 2.5rem;
+  padding: 1.5rem;
+}
+.btn {
+  font-size: 40px;
+  padding-left: 1.5rem;
+  padding-top: 2rem;
+}
+.country_details {
+  grid-column: 2/4;
+  grid-row: 4/-1;
+  background: linear-gradient(#000428, #004e92);
+  color: black;
+  display: grid;
+  grid-template-columns:  repeat(2, 1fr) ;
+  grid-template-rows: repeat(4, 1fr);
+  
+}
+.style {
+  font-size: 15px;
+  color: pink;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-self: flex-end;
+  padding-left: 3rem;
+  letter-spacing: 1px;
+  text-transform:capitalize;
+}
+.answer {
+  color: rgb(249, 249, 252);
+  padding-top: .5rem;
+  font-size: 25px;
+}
+.btn_close{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    color: aliceblue;
+    font-size: 50px;
+    justify-self: flex-end;
+    align-self: flex-end;
+
+}
+.hidden{
+    opacity: 0;
+    
+}

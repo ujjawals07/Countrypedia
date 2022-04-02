@@ -25,13 +25,14 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr)  50vh;
+  grid-template-rows: repeat(3, 1fr) 50vh;
+  opacity: 1;
 }
 .heading {
   grid-column: 2/4;
   font-size: 50px;
   justify-self: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   text-transform: capitalize;
   color: rgb(209, 204, 204);
 }
@@ -40,7 +41,6 @@ body {
   grid-row: 2/3;
   justify-self: center;
   align-self: flex-end;
-
 }
 .search {
   color: rgb(98, 195, 240);
@@ -57,6 +57,7 @@ body {
   font-size: 40px;
   padding-left: 1.5rem;
   padding-top: 2rem;
+  cursor: pointer;
 }
 .country_details {
   grid-column: 2/4;
@@ -64,9 +65,13 @@ body {
   background: linear-gradient(#000428, #004e92);
   color: black;
   display: grid;
-  grid-template-columns:  repeat(2, 1fr) ;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  
+  opacity: 0;
+}
+.img {
+  width: 50%;
+  height: 5vh;
 }
 .style {
   font-size: 15px;
@@ -75,23 +80,20 @@ body {
   align-self: flex-end;
   padding-left: 3rem;
   letter-spacing: 1px;
-  text-transform:capitalize;
+  text-transform: capitalize;
 }
 .answer {
   color: rgb(249, 249, 252);
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   font-size: 25px;
 }
-.btn_close{
-    grid-column: 3/4;
-    grid-row: 4/5;
-    color: aliceblue;
-    font-size: 50px;
-    justify-self: flex-end;
-    align-self: flex-end;
-
-}
-.hidden{
-    opacity: 0;
-    
+.btn_close {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  color: aliceblue;
+  font-size: 50px;
+  justify-self: flex-end;
+  align-self: flex-end;
+  cursor: pointer;
+  opacity: 0;
 }

@@ -1,4 +1,5 @@
 "use strict";
+
 let html;
 console.log("ready");
 const countriesContainer = document.querySelector(".country_details");
@@ -54,30 +55,43 @@ const removecountry = function () {
 };
 
 const country = async function (c) {
-  const res = await fetch(`https://restcountries.com/v3.1/name/${c}`);
-  console.log(res);
-  const data = await res.json();
-  console.log(data);
-  countrydata(data[0]);
+  try {
+    const res = await fetch(`https://restcountries.com/v3.1/name/${c}`);
+    console.log(res);
+    const data = await res.json();
+    console.log(data);
+    countrydata(data[0]);
+  } catch (error) {
+    alert(
+      "either you enter the wrong country name  or something went wrong with our data💥💥"
+    );
+  }
 };
 
 let datasearch = document.querySelector("[data-search]");
 
 const searchbtn = document.querySelector("#btn-search");
-const datas = function () {
-  searchbtn.addEventListener("click", function () {
-    let m = datasearch.value;
-    console.log(m);
-    country(m);
-  });
+
+const showcountry_details = function () {
+  let m = datasearch.value;
+  country(m);
 };
 
+const datas = function () {
+  searchbtn.addEventListener("click", function () {
+    showcountry_details();
+  });
+};
 datas();
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") showcountry_details();
+});
+
 const clear_search = document.querySelector(".search-from");
 const btnclose = document.querySelector("#btn-close");
 btnclose.addEventListener("click", function () {
   console.log("clicked");
   //countriesContainer.style.opacity = 0;
   removecountry();
-clear_search.value = "";
+  clear_search.value = "";
 });
